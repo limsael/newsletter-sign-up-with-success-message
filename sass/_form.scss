@@ -1,0 +1,176 @@
+.card {
+  display: grid;
+  gap: 1.5rem;
+
+  &__img-mobile {
+    width: 100%;
+  }
+
+  &__img-desktop {
+    display: none;
+  }
+
+  &__content {
+    padding: 1.25rem;
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-block-end: 0.5rem;
+  }
+
+  &__text {
+    line-height: 1.6rem;
+    margin-block-end: 0.5rem;
+  }
+
+  &__actions {
+    display: grid;
+    gap: 0.9rem;
+    margin-block-end: 1.5rem;
+  }
+
+  &__action {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  &__form {
+    position: relative;
+
+    &-message {
+      position: absolute;
+      right: 0;
+      top: 3px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: hsl(0, 90%, 66%);
+    }
+  }
+
+  &__form-controls {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  &__form-input {
+    padding: 0.9rem;
+    font-family: "Roboto Bold", sans-serif;
+    color: $grey;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    margin-block-end: 0.5rem;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+
+    &:focus {
+      border-color: $charcoal-grey;
+    }
+  }
+
+  &__btn {
+    background-color: $dark-slate-grey;
+    color: $white;
+    font-family: "Roboto Bold", sans-serif;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $tomato;
+    }
+  }
+
+  &__success {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding: 4rem 1.5rem 2rem;
+    display: none;
+
+    &-icon {
+      margin-block-end: 1.5rem;
+    }
+
+    &-email {
+      font-family: "Roboto Bold", sans-serif;
+    }
+
+    &-thanks {
+      font-size: 2.25rem;
+      margin-block-end: 1.25rem;
+      font-family: "Roboto Bold", sans-serif;
+    }
+
+    &-message {
+      margin-block-end: 10rem;
+    }
+
+    &-btn {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: $dark-slate-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+  }
+  .card {
+    max-width: 750px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $white;
+    margin: 0 auto;
+    padding: 1.21rem;
+    border-radius: 1.25rem;
+    // gap: 2.5rem;
+
+    &__img-mobile {
+      display: none;
+    }
+
+    &__img-desktop {
+      display: block;
+      width: 100%;
+    }
+
+    &__content {
+      order: -1;
+    }
+
+    &__actions {
+      margin-block-end: 0.75rem;
+    }
+
+    &__success {
+      max-width: 450px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 1.25rem;
+      padding-inline: 3.5rem;
+
+      &-thanks {
+        font-size: 2rem;
+      }
+
+      &-message {
+        margin-block-end: 2rem;
+      }
+
+      &-btn {
+        margin-block-end: 1rem;
+      }
+    }
+  }
+}

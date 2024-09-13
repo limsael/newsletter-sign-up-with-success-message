@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="card__header">
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Illustration sign up form mobile devices"
+            class="card__img-mobile"
+          />
+
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="Illustration sign up form desktop "
+            class="card__img-desktop"
+          />
+        </div>
+
+        <div class="card__content">
+          <h1 class="card__title">Stay updated!</h1>
+
+          <p class="card__text">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <div class="card__actions">
+            <p class="card__action">
+              <span>
+                <img src="./assets/images/icon-list.svg" alt="icon list" />
+              </span>
+
+              <span> Product discovery and building what matters </span>
+            </p>
+
+            <p class="card__action">
+              <span>
+                <img src="./assets/images/icon-list.svg" alt="icon list" />
+              </span>
+
+              <span> Measuring to ensure updates are a success </span>
+            </p>
+
+            <p class="card__action">
+              <span>
+                <img src="./assets/images/icon-list.svg" alt="icon list" />
+              </span>
+
+              <span>And much more!</span>
+            </p>
+          </div>
+
+          <form novalidate class="card__form">
+            <div class="card__form-controls">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="email@company.com"
+                class="card__form-input"
+              />
+
+              <button class="card__btn" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+
+              <div class="card__form-message" id="form-message"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card__success" id="form-success">
+        <div class="card__success-info">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt="icon checkmark"
+            class="card__success-icon"
+          />
+          <h2 class="card__success-thanks">Thanks for subscribing!</h2>
+
+          <p class="card__success-message">
+            A confirmation email has been sent to
+            <span id="user-email" class="card__success-email"></span>. Please
+            open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+
+        <button class="card__btn card__success-btn" id="dismiss-btn">
+          Dismiss message
+        </button>
+      </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
