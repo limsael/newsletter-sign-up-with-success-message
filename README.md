@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/newsletter-sign-up-with-success-message-html-sass-js-qLk-am-M5i)
+- Live Site URL: [Live site URL here](https://limsael.github.io/newsletter-sign-up-with-success-message/)
 
 ## My process
 
@@ -50,32 +50,48 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Javascript 
 
 
 ### What I learned
 
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (emailInput.value === "") {
+    formMessage.textContent = "Please enter your email address.";
+  } else if (
+    !emailInput.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
+  ) {
+    formMessage.textContent = "Valid email required";
+  } else {
+    body.classList.add("success");
+
+    dismissBtn.addEventListener("click", () => {
+      body.classList.remove("success");
+    });
+
+    formMessage.textContent = "";
+    userEmail.textContent = emailInput.value;
+    emailInput.value = "";
+  }
+});
 ```
 
 
 
 ### Continued development
 
-
+- The javascript
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me understand client side  form validation
+
+
+- [How to Build and Validate Beautiful Forms with Vanilla HTML, CSS, & JS](https://www.freecodecamp.org/news/build-and-validate-beautiful-forms-with-vanilla-html-css-js/) - This is an amazing tutorial that helped me understand form validation.
 
 
 ## Author
